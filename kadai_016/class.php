@@ -15,6 +15,14 @@
              public $name;
              public $price;
  
+             // メソッドを定義する
+             public function set_price(string $price) {
+                $this->price = $price;
+             }
+             public function show_price() {
+                echo $this->price . '<br>';
+             }
+
              // コンストラクタを定義
              public function __construct(string $name, int $price) {
                  $this->name = $name;
@@ -35,6 +43,14 @@
              public $name;
              public $height;
              public $weight;
+
+             // メソッドを定義する
+             public function set_height(string $height) {
+                $this->height = $height;
+             }
+             public function show_height() {
+                echo $this->height . '<br>';
+             }
  
              // コンストラクタを定義
              public function __construct(string $name, int $height, int $weight) {
@@ -51,17 +67,14 @@
           print_r($animal);
           echo '<br>';
 
-          // プロパティにアクセスし、値を代入する
-          $food->price = 250;
+          // メソッドにアクセス
+          $food->set_price('250');
+          $food->show_price() . '<br>';
 
-          // プロパティにアクセスし、値を出力する
-          echo $food->price . '<br>';
+          // メソッドにアクセス
+          $animal->set_height('60');
+          $animal->show_height() . '<br>';
 
-          // プロパティにアクセスし、値を代入する
-          $animal->height = 60;
-
-          // プロパティにアクセスし、値を出力する
-          echo $animal->height . '<br>';
           ?>
      </p>
     
